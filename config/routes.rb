@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
-    !request.xhr? && request.format.html?
-  end
   namespace :api do
     namespace :v1 do
       resources :restaurants do
@@ -15,5 +12,8 @@ Rails.application.routes.draw do
         registrations: 'api/v1/auth/registrations'
       }
     end
+  end
+  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+    !request.xhr? && request.format.html?
   end
 end

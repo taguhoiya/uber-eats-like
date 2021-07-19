@@ -1,5 +1,21 @@
 {
   "dependencies": {
     "react-router-dom": "^5.2.0"
-  }
+  },
+  "name": "uber-eats-like",
+  "description": "You can post articles using this application.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ..",
+    "deploy": "cp -a frontend/src/. public/",
+    "heroku-postbuild": "npm run build && npm run deploy && echo 'Client built!'"
+  },
+  "author": "",
+  "license": "ISC"
 }
