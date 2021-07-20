@@ -14,7 +14,12 @@ function App() {
   return (
     <Router>
       <Switch>
- 
+        <Route
+          exact
+          path="/">
+          <Restaurants />
+        </Route>
+
         <Route
           exact
           path="/restaurants">

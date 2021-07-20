@@ -36,7 +36,6 @@ const MainCover = styled.img`
   height: 600px;
 `;
 
-// --- ここから追加 ---
 const RestaurantsContentsList = styled.div`
   display: flex;
   justify-content: space-around;
