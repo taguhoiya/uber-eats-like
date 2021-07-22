@@ -1,1 +1,1 @@
-web: rake start -p ${PORT:-3000}
+web: rake start 
