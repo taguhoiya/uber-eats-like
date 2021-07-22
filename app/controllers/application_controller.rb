@@ -7,9 +7,4 @@ class ApplicationController < ActionController::API
       sleep(1)
     end
 
-    def fallback_index_html
-        respond_to do |format|
-            format.html { render body: Rails.root.join('public/components/').read }
-        end
-    end
 end
