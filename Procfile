@@ -1,1 +1,1 @@
-web: rake start:production
+web: bundle exec rails s
