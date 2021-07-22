@@ -6,7 +6,7 @@ namespace :start do
 
     desc 'Start production server'
     task :production do
-      exec 'NPM_CONFIG_PRODUCTION=true yarn heroku-postbuild && foreman start'
+      exec 'NPM_CONFIG_PRODUCTION=true npm heroku-postbuild && foreman start'
     end  
 end
-task :start => 'start:production'
+task :start => 'start:development'
