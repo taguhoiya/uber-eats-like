@@ -1,5 +1,4 @@
-Rails.application.routes.draw do
-  root 'api/v1/restaurants#index'
+Rails.application.routes.draw
   namespace :api do
     namespace :v1 do
       resources :restaurants do
@@ -14,7 +13,7 @@ Rails.application.routes.draw do
       }
     end
   end
-  get '*path', to: "application#fallback_app_js", constraints: ->(request) do
+  get '/', to: "application#fallback_app_js", constraints: ->(request) do
     !request.xhr? && request.format.js?
   end
 end
