@@ -14,5 +14,7 @@ Rails.application.routes.draw do
       }
     end
   end
-
+  get '*path', to: "application#fallback_app_js", constraints: ->(request) do
+    !request.xhr? && request.format.js?
+  end
 end

@@ -7,4 +7,9 @@ class ApplicationController < ActionController::API
       sleep(1)
     end
 
+    def fallback_app_js
+        respond_to do |format|
+            format.js { render body: Rails.root.join('public/App.js').read }
+        end
+    end
 end
