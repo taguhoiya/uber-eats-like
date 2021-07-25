@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import Skeleton from '@material-ui/lab/Skeleton';
 import {
   HeaderWrapper,
-  MainLogoImage
+  MainLogoImage,
+  ColoredBagIcon,
+  BagIconWrapper
 } from '../components/StyledHeader.jsx';
 
 // apis
@@ -83,6 +85,11 @@ export const Restaurants = () => {
     <Fragment>
       <HeaderWrapper>
         <MainLogoImage src={MainLogo} alt="main logo" />
+        <BagIconWrapper>
+          <Link to="/orders">
+            <ColoredBagIcon fontSize="large" />
+          </Link>
+        </BagIconWrapper>
       </HeaderWrapper>
       <MainCoverImageWrapper>
         <MainCover src={MainCoverImage} alt="main cover" />

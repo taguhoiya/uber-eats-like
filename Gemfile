@@ -32,6 +32,7 @@ gem 'devise_token_auth'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'foreman'
 end
 
 group :development do
@@ -48,6 +49,6 @@ group :development do
   gem 'guard-livereload', '~> 2.4', require: false
 end
 
-gem 'foreman'
+
 
 gem 'faker'
